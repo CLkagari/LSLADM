@@ -7,7 +7,7 @@ u1 = ilaplace(laplace(u0*u0xxx+u0*u0x+3*u0x*u0xx,t,s)/s^a,s,t);
 u1x = diff(u1,x);u1xx = diff(u1x,x);u1xxx = diff(u1xx,x);
 
 u2 = ilaplace(laplace((u1*u0xxx+u0*u1xxx)+(u1*u0x+u0*u1x)+3*(u1x*u0xx+u0x*u1xx),t,s)/s^a,s,t);
-u2x = diff(u1,x);u2xx = diff(u1x,x);u2xxx = diff(u1xx,x);
+u2x = diff(u2,x);u2xx = diff(u2x,x);u2xxx = diff(u2xx,x);
 
 u3 = ilaplace(laplace((u2*u0xxx+u0*u2xxx+u1*u1xxx)+(u2*u0x+u0*u2x+u1*u1x)+3*(u2x*u0xx+u0x*u2xx+u1x*u1xx),t,s)/s^a,s,t);
 
